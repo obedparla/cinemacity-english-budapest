@@ -45,19 +45,19 @@ export function Filters({
   const dateOptions = buildDateOptions();
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-col md:flex-row md:items-center gap-3">
-        <div className="relative flex-1">
+    <div className="space-y-3 md:space-y-4">
+      <div className="flex items-center gap-2 md:gap-3">
+        <div className="relative flex-1 min-w-0">
           <input
             type="text"
             value={filters.searchText}
             onChange={(event) => setFilters({ ...filters, searchText: event.target.value })}
             placeholder="Search by title..."
-            className="w-full bg-zinc-900/70 ring-1 ring-white/10 focus:ring-indigo-400/60 focus:outline-none rounded-xl px-4 py-3 text-zinc-100 placeholder:text-zinc-500"
+            className="w-full bg-zinc-900/70 ring-1 ring-white/10 focus:ring-indigo-400/60 focus:outline-none rounded-xl px-3 py-2 md:px-4 md:py-3 text-sm md:text-base text-zinc-100 placeholder:text-zinc-500"
           />
         </div>
-        <div className="text-sm text-zinc-400 tabular-nums">
-          {resultCount} / {totalCount} films
+        <div className="shrink-0 text-xs md:text-sm text-zinc-400 tabular-nums">
+          {resultCount} / {totalCount}
         </div>
       </div>
 

@@ -154,17 +154,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-950 to-black text-zinc-100">
-      <div className="max-w-6xl mx-auto px-4 py-6 md:py-10">
-        <header className="mb-6 md:mb-10">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+      <div className="max-w-6xl mx-auto px-4 py-4 md:py-10">
+        <header className="mb-4 md:mb-10">
+          <h1 className="text-2xl md:text-5xl font-bold tracking-tight">
             English movies in Budapest
           </h1>
-          <p className="mt-2 text-zinc-400 text-sm md:text-base">
+          <p className="mt-1 md:mt-2 text-zinc-400 text-xs md:text-base">
             Cinema City · Művész · Puskin · Toldi · Tabán · Kino Cafe · Corvin
           </p>
         </header>
 
-        <div className="sticky top-0 -mx-4 px-4 py-4 mb-6 bg-zinc-950/80 backdrop-blur z-10 border-b border-white/5">
+        <div className="sticky top-0 -mx-4 px-4 py-3 md:py-4 mb-4 md:mb-6 bg-zinc-950/90 backdrop-blur z-10 border-b border-white/5">
           <Filters
             filters={filters}
             setFilters={setFilters}
