@@ -83,6 +83,12 @@ function extractFormats(attributeIds: string[]): string[] {
   return formats.map((format) => format.toUpperCase().replace("-", " "));
 }
 
+function toUserBookingUrl(apiBookingLink: string): string {
+  // API returns tickets.cinemacity.hu/api/order/{id}?lang=hu (404 in browser).
+  // User-facing page lives at tickets.cinemacity.hu/order/{id}.
+  return apiBookingLink.replace("/api/order/", "/order/");
+}
+
 async function fetchCinemaCityDay(
   cinemaId: string,
   date: string,
@@ -117,7 +123,7 @@ export async function fetchCinemaCityShowings(date: string): Promise<SourceResul
           posterUrl: film.posterLink,
           isoDateTime: event.eventDateTime,
           format: extractFormats(event.attributeIds),
-          bookingUrl: event.bookingLink,
+          bookingUrl: toUserBookingUrl(event.bookingLink),
           filmLink: film.link,
           language: { audio: "English", subtitles: "Hungarian" },
           source: "cinemacity",
