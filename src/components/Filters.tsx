@@ -61,7 +61,7 @@ export function Filters({
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-1.5">
+      <div className="flex md:flex-wrap gap-1.5 overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
         {dateOptions.map((dateKey) => {
           const active = filters.selectedDate === dateKey;
           return (
@@ -69,7 +69,7 @@ export function Filters({
               key={dateKey}
               type="button"
               onClick={() => setFilters({ ...filters, selectedDate: dateKey })}
-              className={`px-3 py-1.5 rounded-lg text-sm transition ${
+              className={`shrink-0 whitespace-nowrap px-3 py-1.5 rounded-lg text-sm transition ${
                 active
                   ? "bg-indigo-500 text-white"
                   : "bg-zinc-900/60 text-zinc-300 ring-1 ring-white/10 hover:ring-white/30"
@@ -86,7 +86,7 @@ export function Filters({
           <div className="text-[11px] uppercase tracking-wider text-zinc-500 mb-1.5">
             Cinemas
           </div>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex md:flex-wrap gap-1.5 overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
             {availableCinemas.map((cinema) => {
               const active = filters.selectedCinemas.has(cinema.slug);
               return (
@@ -99,7 +99,7 @@ export function Filters({
                       selectedCinemas: toggle(filters.selectedCinemas, cinema.slug),
                     })
                   }
-                  className={`px-2.5 py-1 rounded-md text-xs transition ${
+                  className={`shrink-0 whitespace-nowrap px-2.5 py-1 rounded-md text-xs transition ${
                     active
                       ? "bg-emerald-500/20 ring-1 ring-emerald-400/50 text-emerald-100"
                       : "bg-zinc-900/60 ring-1 ring-white/10 text-zinc-300 hover:ring-white/30"
