@@ -82,27 +82,27 @@ export function MovieCard({ movie, englishTitle }: Props) {
   const primaryTitle = showBothTitles ? englishTitle : movie.movieTitle;
 
   return (
-    <article className="overflow-hidden rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 hover:ring-white/20 transition-shadow sm:p-4 sm:grid sm:grid-cols-[160px,1fr] sm:gap-4">
+    <article className="grid grid-cols-[120px,1fr] sm:grid-cols-[160px,1fr] gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 hover:ring-white/20 transition-shadow">
       <a
         href={movie.filmLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="block bg-zinc-800 overflow-hidden sm:rounded-lg sm:aspect-[2/3]"
+        className="block aspect-[2/3] overflow-hidden rounded-lg bg-zinc-800 self-start"
       >
         {movie.posterUrl ? (
           <img
             src={movie.posterUrl}
             alt={movie.movieTitle}
             loading="lazy"
-            className="w-full h-44 sm:h-full object-cover object-top sm:object-center transition-transform hover:scale-105"
+            className="w-full h-full object-cover transition-transform hover:scale-105"
           />
         ) : (
-          <div className="w-full h-44 sm:h-full grid place-items-center text-zinc-500 text-xs">
+          <div className="w-full h-full grid place-items-center text-zinc-500 text-xs">
             no poster
           </div>
         )}
       </a>
-      <div className="flex flex-col min-w-0 p-3 sm:p-0">
+      <div className="flex flex-col min-w-0">
         <div className="flex items-baseline gap-2 flex-wrap">
           <h2 className="text-lg md:text-xl font-semibold text-white">{primaryTitle}</h2>
           {movie.durationMinutes ? (
