@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /proxy/
+Disallow: /api/
+
+Sitemap: https://english-cinemas-budapest.vercel.app/sitemap.xml

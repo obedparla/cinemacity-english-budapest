@@ -2,12 +2,79 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English movies in Budapest</title>
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <title>English Movies in Budapest – Cinema Times &amp; Tickets</title>
+    <meta
+      name="description"
+      content="Find all English-language movies playing today in Budapest cinemas. Aggregated showtimes for Cinema City, Művész, Puskin, Toldi, Tabán, Kino Cafe, and Corvin — with format (2D, 3D, IMAX, 4DX, VIP) and direct booking links."
+    />
+    <meta
+      name="keywords"
+      content="english movies budapest, english cinema budapest, movies in english budapest, cinema city budapest english, művész mozi english, puskin mozi english, toldi mozi, corvin mozi, original version movies budapest, eredeti angol felirat"
+    />
+    <link rel="canonical" href="https://english-cinemas-budapest.vercel.app/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="English Movies in Budapest" />
+    <meta
+      property="og:title"
+      content="English Movies in Budapest – Cinema Times &amp; Tickets"
+    />
+    <meta
+      property="og:description"
+      content="All English-language films currently in Budapest cinemas, with times, format, and one-click booking. Cinema City, Művész, Puskin, Toldi, Tabán, Kino Cafe, Corvin."
+    />
+    <meta property="og:url" content="https://english-cinemas-budapest.vercel.app/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="hu_HU" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="English Movies in Budapest – Cinema Times &amp; Tickets"
+    />
+    <meta
+      name="twitter:description"
+      content="All English-language films in Budapest cinemas, aggregated by date with showtimes and direct booking links."
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "English Movies in Budapest",
+        "url": "https://english-cinemas-budapest.vercel.app/",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Any",
+        "description": "Aggregator of English-language film showtimes across Budapest cinemas: Cinema City, Művész, Puskin, Toldi, Tabán, Kino Cafe, and Corvin.",
+        "inLanguage": "en",
+        "areaServed": {
+          "@type": "City",
+          "name": "Budapest",
+          "containedInPlace": { "@type": "Country", "name": "Hungary" }
+        },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <noscript>
+        <h1>English movies in Budapest</h1>
+        <p>
+          This app aggregates English-language movie showtimes from Budapest
+          cinemas: Cinema City (Allee, Aréna, Campona, Duna Pláza, Mammut,
+          Westend), Művész Mozi, Puskin Mozi, Toldi Mozi, Tabán artmozi, Kino
+          Cafe Mozi, and Corvin Mozi.
+        </p>
+        <p>JavaScript is required to load and filter live showtimes.</p>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
